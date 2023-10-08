@@ -13,8 +13,6 @@ public class MainActivity extends AppCompatActivity {
     private TextView calculatorDisplay;
     private TextView subDisplay;
 
-    private boolean inCalculationProcess = false;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
