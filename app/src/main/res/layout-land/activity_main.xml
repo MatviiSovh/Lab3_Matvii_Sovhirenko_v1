@@ -21,37 +21,19 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1">
-
-            <TextView
-                android:id="@+id/subDisplay"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="2"
-                android:gravity="center_vertical|right"
-                android:textColor="#FDFEFE"
-                android:textSize="20sp"
-                android:singleLine="true"
-                android:ellipsize="end"/>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2">
+            android:layout_weight="5">
 
             <TextView
                 android:id="@+id/calculatorDisplay"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="2"
+                android:text="0"
                 android:gravity="center_vertical|right"
                 android:textColor="#FDFEFE"
                 android:textSize="30sp"
-                android:singleLine="true"
-                android:ellipsize="end"/>
+                />
         </TableRow>
-
 
         <TableRow
             android:layout_width="match_parent"
@@ -117,41 +99,37 @@
                 android:textSize="22sp"
                 android:backgroundTint="#95A5A6"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "deleteLastChar"/>
+                android:textColor="#000000"/>
 
             <Button
                 android:id="@+id/CE"
                 android:layout_height="match_parent"
                 android:layout_margin="3dp"
                 android:text="CE"
-                android:textSize="20sp"
+                android:textSize="22sp"
                 android:backgroundTint="#95A5A6"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "clearLastEntryBtn"/>
+                android:textColor="#000000"/>
 
             <Button
                 android:id="@+id/C"
                 android:layout_height="match_parent"
                 android:layout_margin="3dp"
-                android:text="AC"
-                android:textSize="20sp"
+                android:text="C"
+                android:textSize="22sp"
                 android:backgroundTint="#95A5A6"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "allClearBtn"/>
+                android:textColor="#000000"/>
 
             <Button
-                android:id="@+id/slash"
+                android:id="@+id/plusMinus"
                 android:layout_height="match_parent"
-                android:text="/"
-                android:textSize="22sp"
                 android:layout_margin="3dp"
+                android:text="+-"
+                android:textSize="22sp"
                 android:backgroundTint="#95A5A6"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "signBtnClick"/>
+                android:textColor="#000000"/>
 
             <Button
                 android:id="@+id/root"
@@ -160,8 +138,7 @@
                 android:text="√"
                 android:textSize="22sp" android:backgroundTint="#95A5A6"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "squareRootBtn"/>
+                android:textColor="#000000"/>
         </TableRow>
 
         <TableRow
@@ -177,8 +154,7 @@
                 android:layout_margin="3dp"
                 android:backgroundTint="#EDBB99"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "numBtnClick"/>
+                android:textColor="#000000"/>
 
             <Button
                 android:id="@+id/eight"
@@ -188,8 +164,7 @@
                 android:layout_margin="3dp"
                 android:backgroundTint="#EDBB99"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "numBtnClick"/>
+                android:textColor="#000000"/>
 
             <Button
                 android:id="@+id/nine"
@@ -199,19 +174,17 @@
                 android:layout_margin="3dp"
                 android:backgroundTint="#EDBB99"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "numBtnClick"/>
+                android:textColor="#000000"/>
 
             <Button
-                android:id="@+id/Multiply"
+                android:id="@+id/slash"
                 android:layout_height="match_parent"
-                android:text="*"
+                android:text="/"
                 android:textSize="22sp"
                 android:layout_margin="3dp"
                 android:backgroundTint="#95A5A6"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "signBtnClick"/>
+                android:textColor="#000000"/>
 
             <Button
                 android:id="@+id/percent"
@@ -237,8 +210,7 @@
                 android:layout_margin="3dp"
                 android:backgroundTint="#EDBB99"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "numBtnClick"/>
+                android:textColor="#000000"/>
 
             <Button
                 android:id="@+id/Five"
@@ -248,8 +220,7 @@
                 android:layout_margin="3dp"
                 android:backgroundTint="#EDBB99"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "numBtnClick"/>
+                android:textColor="#000000"/>
 
             <Button
                 android:id="@+id/Six"
@@ -259,19 +230,17 @@
                 android:layout_margin="3dp"
                 android:backgroundTint="#EDBB99"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "numBtnClick"/>
+                android:textColor="#000000"/>
 
             <Button
-                android:id="@+id/minus"
+                android:id="@+id/Multiply"
                 android:layout_height="match_parent"
-                android:text="-"
+                android:text="*"
                 android:textSize="22sp"
                 android:layout_margin="3dp"
                 android:backgroundTint="#95A5A6"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "signBtnClick"/>
+                android:textColor="#000000"/>
 
             <Button
                 android:id="@+id/Inverse"
@@ -297,8 +266,7 @@
                 android:layout_margin="3dp"
                 android:backgroundTint="#EDBB99"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "numBtnClick"/>
+                android:textColor="#000000"/>
 
             <Button
                 android:id="@+id/two"
@@ -308,8 +276,7 @@
                 android:layout_margin="3dp"
                 android:backgroundTint="#EDBB99"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "numBtnClick"/>
+                android:textColor="#000000"/>
 
             <Button
                 android:id="@+id/three"
@@ -319,19 +286,17 @@
                 android:layout_margin="3dp"
                 android:backgroundTint="#EDBB99"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "numBtnClick"/>
+                android:textColor="#000000"/>
 
             <Button
-                android:id="@+id/plus"
+                android:id="@+id/minus"
                 android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:text="+"
+                android:text="-"
                 android:textSize="22sp"
+                android:layout_margin="3dp"
                 android:backgroundTint="#95A5A6"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "signBtnClick"/>
+                android:textColor="#000000"/>
 
             <Button
                 android:id="@+id/dot"
@@ -341,8 +306,7 @@
                 android:layout_margin="3dp"
                 android:backgroundTint="#95A5A6"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "dotSignBtn"/>
+                android:textColor="#000000"/>
         </TableRow>
 
         <TableRow
@@ -359,31 +323,18 @@
                 android:layout_margin="3dp"
                 android:backgroundTint="#EDBB99"
                 app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "numBtnClick"/>
-
-            <Button
-                android:id="@+id/plusMinus"
-                android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:text="+-"
-                android:textSize="22sp"
-                android:backgroundTint="#95A5A6"
-                app:cornerRadius="20dp"
-                android:textColor="#000000"
-                android:onClick = "signChane"/>
+                android:textColor="#000000"/>
 
             <Button
                 android:id="@+id/equal"
                 android:layout_height="match_parent"
-                android:layout_margin="3dp"
-                android:layout_span="2"
-                android:backgroundTint="#95A5A6"
+                android:layout_span="3"
                 android:text="="
-                android:textColor="#000000"
                 android:textSize="22sp"
+                android:layout_margin="3dp"
+                android:backgroundTint="#95A5A6"
                 app:cornerRadius="20dp"
-                android:onClick = "resultBtn"/>
+                android:textColor="#000000"/>
         </TableRow>
     </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
