@@ -4,9 +4,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-import com.example.lab3_matvii_sovhirenko_v1.MathActions;
-
-public class ExampleUnitTest {
+public class MathFunctionsTest {
     @Test
     public void testAdditionMethodPositiveNumbers(){
         final double firstInput = 1.92;
