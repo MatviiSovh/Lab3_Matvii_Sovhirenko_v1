@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Arrays;
+import com.example.lab3_matvii_sovhirenko_v1.MathActions;
 
 public class MainActivity extends AppCompatActivity {
     private TextView calculatorDisplay;
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void signChane(View v) {
         if (!calculatorDisplay.getText().toString().isEmpty()) {
-            double currentValue = Double.parseDouble(calculatorDisplay.getText().toString()) * (-1);
+            double currentValue = MathActions.changeSign(Double.parseDouble(calculatorDisplay.getText().toString()));
             calculatorDisplay.setText((currentValue == (int) currentValue) ? String.valueOf((int) currentValue) : String.valueOf(currentValue));
         }
     }
@@ -88,16 +89,16 @@ public class MainActivity extends AppCompatActivity {
             double secondOperand = Double.parseDouble(calculatorDisplay.getText().toString());
             switch(sign){
                 case '-':
-                    result = firstOperand - secondOperand;
+                    result = MathActions.subtraction(firstOperand,secondOperand);
                     break;
                 case '+':
-                    result = firstOperand + secondOperand;
+                    result = MathActions.addition(firstOperand,secondOperand);
                     break;
                 case '/':
-                    result = firstOperand/secondOperand;
+                    result = MathActions.division(firstOperand,secondOperand);
                     break;
                 case '*':
-                    result = firstOperand*secondOperand;
+                    result = MathActions.multiplication(firstOperand,secondOperand);
                     break;
             }
             return (result == (int) result) ? String.valueOf((int) result) : String.valueOf(result);
@@ -112,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void squareRootBtn(View v){
         if (!calculatorDisplay.getText().toString().isEmpty()) {
-            double currentValue = Math.sqrt(Double.parseDouble(calculatorDisplay.getText().toString()));
+            double currentValue = MathActions.squareRoot(Double.parseDouble(calculatorDisplay.getText().toString()));
             calculatorDisplay.setText((currentValue == (int) currentValue) ? String.valueOf((int) currentValue) : String.valueOf(currentValue));
         }
     }
